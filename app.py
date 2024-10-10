@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Página de inicio
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 # Página Quiénes Somos
