@@ -3,8 +3,8 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Página de inicio
-@app.route('/index')
-def index():
+@app.route('/')
+def home():
     return render_template('index.html')
 
 # Página Quiénes Somos
