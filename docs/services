@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/docs/static/style.css">
 </head>
 <body>
     <header>
@@ -24,12 +24,12 @@
 <h1>Nuestros Servicios</h1>
 <div>
     <h3>La Inteligencia Artificial en el reconocimiento de voz</h3>
-    <img src="/static/images/service1.png" alt="Servicio 1">
+    <img src="/docs/static/images/service1.png" alt="Servicio 1">
     <p>El reconocimiento de voz es un tipo de inteligencia artificial, muy extendida en sanidad, en ámbitos como la radiología, que trata de establecer una comunicación entre el hombre y los ordenadores o dispositivos inteligentes, a través del lenguaje humano. La tecnología de reconocimiento de voz hace que el procesador sea capaz de descifrar la información que contiene la voz humana e incluso de predecir lo que el humano quiere decir para reducir la tasa de error en la transcripción. Los primeros pasos en este aspecto comenzaron en los años 50, pero ha sido en la última década cuando se ha hecho un avance gigantesco en el reconocimiento del lenguaje natural.</p>
 </div>
 <div>
     <h3>Inteligencia artificial</h3>
-    <img src="/static/images/service2.png" alt="Servicio 2">
+    <img src="/docs/static/images/service2.png" alt="Servicio 2">
     <p>En el Hospital Universitario de Helsinki, Finlandia, la medicina asistida por inteligencia artificial y el aprendizaje automático ya está ayudando a los médicos a tratar a pacientes en diálisis desde casa y a prevenir futuros ataques cardíacos en pacientes que han sufrido.</p><br><br><br>
 </div>
 
