@@ -1,33 +1,15 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Empresa Ficticia</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <header>
-        <img src="{{ url_for('static', filename='images/logo.png') }}" width="100" alt="Logotipo de la Empresa">
-        <h1>Empresa Ficticia</h1>
-        <p>Ofrecemos soluciones innovadoras para tu negocio.</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/about">Quiénes Somos</a></li>
-            <li><a href="/services">Servicios</a></li>
-            <li><a href="/news">Noticias</a></li>
-            <li><a href="/contact">Contacto</a></li>
-        </ul>
-    </nav>
-    
-    <section>
-        <h2>Testimonios de Clientes</h2>
-        <p>"Excelente servicio, mejoramos nuestras operaciones gracias a esta empresa."</p>
-        <button>Llama a la acción</button>
-        <a href="#">Síguenos en Redes Sociales</a>
-    </section>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h1>Bienvenidos a AmVirt</h1>
+<img src="/static/images/logo.png" width="100" alt="Logotipo de la empresa">
+<p>Ofrecemos soluciones innovadoras para tu negocio mediante la Inteligencia Artificial. Nuestro producto te ayuda a crecer.</p>
+
+<h2>Testimonios</h2>
+<p>"Gracias a AmVirt, mi negocio ha mejorado un 300%." - Cliente Feliz</p>
+
+<h2>Redes Sociales</h2>
+<a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a><br><br><br>
+
+{% endblock %}

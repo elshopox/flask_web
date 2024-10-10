@@ -1,39 +1,29 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Empresa Ficticia</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/about">Quiénes Somos</a></li>
-            <li><a href="/services">Servicios</a></li>
-            <li><a href="/news">Noticias</a></li>
-            <li><a href="/contact">Contacto</a></li>
-        </ul>
-    </nav>
+{% extends 'base.html' %}
+{% block title %}Contacto{% endblock %}
 
-    <section>
-        <h1>Contacto</h1>
-        <form method="POST">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
+{% block content %}
+<h1>Contáctanos</h1>
+<form method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br>
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
 
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" required></textarea><br>
 
-            <button type="submit">Enviar</button>
-        </form>
-        <p>Dirección: Calle Ficticia 123</p>
-        <p>Teléfono: +123 456 789</p>
-        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509639!2d144.95592831563232!3d-37.81720937975167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577ed03dd3e840!2sCalle+Ficticia+123!5e0!3m2!1ses!2ses!4v1634556000000!5m2!1ses!2ses" width="600" height="450"></iframe></p>
-    </section>
-</body>
-</html>
+    <button type="submit">Enviar</button>
+</form>
+
+<h2>Información de Contacto</h2>
+<p>Dirección: Calle Obispo Balderrama 1278, Ciudad La Paz - Bolivia</p>
+<p>Teléfono: +591 62460704</p>
+<p>Email: elshopojr@gmail.com</p>
+<br>
+
+<h3>Mi ubicación en Google Maps</h3>
+<!-- Aquí se incrusta el mapa con el iframe -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d524.7753561049205!2d-68.1487696312442!3d-16.50086332728958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sbo!4v1728478142892!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<br><br>
+{% endblock %}

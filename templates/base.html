@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>{% block title %}Mi Empresa{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <header>
-        <h1>Mi Empresa Ficticia</h1>
         <nav>
             <ul>
                 <li><a href="/">Inicio</a></li>
@@ -20,18 +19,12 @@
         </nav>
     </header>
 
-    <section>
+    <div class="content">
         {% block content %}{% endblock %}
-    </section>
-
+    </div>
+    <br><br><br>
     <footer>
-        <p>Síguenos en redes sociales:</p>
-        <div class="social-icons">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
-        <p>© 2024 Mi Empresa Ficticia. Todos los derechos reservados.</p>
+        <p>© 2024 AmVirt. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
