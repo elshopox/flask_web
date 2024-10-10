@@ -24,17 +24,15 @@ def services():
 def news():
     return render_template('news.html')
 
-# Página de Contacto con manejo de método POST
+# Página de Contacto con método POST
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
         nombre = request.form.get('nombre')
         email = request.form.get('email')
         mensaje = request.form.get('mensaje')
-        # Aquí puedes procesar los datos, como enviarlos a un email o guardarlos
         return f"Mensaje enviado por {nombre}."
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)  # Puedes usar esto para desarrollo
-    # freezer.freeze()  # Usa esto para congelar la aplicación para producción
+    freezer.freeze()  # Esta línea congelará tu aplicación y generará los archivos HTML estáticos
