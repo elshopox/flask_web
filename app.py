@@ -1,12 +1,10 @@
 from flask import Flask, render_template, request
-from flask_frozen import Freezer
 
 app = Flask(__name__)
-freezer = Freezer(app)
 
-# Página principal
+# Página de inicio
 @app.route('/')
-def index():
+def home():
     return render_template('index.html')
 
 # Página Quiénes Somos
@@ -24,15 +22,16 @@ def services():
 def news():
     return render_template('news.html')
 
-# Página de Contacto con método POST
+# Página de Contacto
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        nombre = request.form.get('nombre')
-        email = request.form.get('email')
-        mensaje = request.form.get('mensaje')
+        nombre = request.form['nombre']
+        email = request.form['email']
+        mensaje = request.form['mensaje']
+        # Aquí puedes procesar los datos como enviarlos a un email o guardarlos
         return f"Mensaje enviado por {nombre}."
     return render_template('contact.html')
 
 if __name__ == '__main__':
-    freezer.freeze()  # Esta línea congelará tu aplicación y generará los archivos HTML estáticos
+    app.run(debug=True)
